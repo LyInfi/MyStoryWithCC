@@ -1,23 +1,6 @@
 # 📸 My Story With CC
 
-我和 CC 的故事，用图片记录每一天。
-
----
-
-## 📁 目录结构
-
-```
-MyStoryWithCC/
-├── avatar.jpg
-├── 2026/
-│   ├── 01/   # 2026年1月
-│   ├── 02/   # 2026年2月
-│   └── 03/   # 2026年3月
-│       └── 2026031001.jpg
-└── ...
-```
-
-> 图片命名规则：`YYYYMMDD序号.jpg`，例如 `2026031001.jpg` = 2026年3月10日第1张
+记录我和 CC 的故事。
 
 ---
 
@@ -33,8 +16,5 @@ MyStoryWithCC/
 
 ---
 
-## 👤 关于
-
-<img src="avatar.jpg" width="100" alt="avatar" style="border-radius: 50%">
-
-用 AI 记录生活，留住每一个珍贵瞬间。
+抖音：我和CC
+小红书：
