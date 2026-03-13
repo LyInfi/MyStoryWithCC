@@ -1,2 +1,5 @@
 .claude/settings.json
 
+video/node_modules/
+video/out/
+video/dist/

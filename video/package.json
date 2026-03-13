@@ -1,0 +1,22 @@
+{
+  "name": "my-story-with-cc",
+  "version": "1.0.0",
+  "description": "My Story With CC - Chat Video",
+  "scripts": {
+    "start": "npx remotion studio",
+    "render": "npx remotion render",
+    "render:2026-03-12": "npx remotion render Video-2026-03-12 out/video-2026-03-12.mp4 --browser-executable=\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\"",
+    "render:2026-03-13": "npx remotion render Video-2026-03-13 out/video-2026-03-13.mp4 --browser-executable=\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\""
+  },
+  "dependencies": {
+    "remotion": "4.0.435",
+    "@remotion/cli": "4.0.435",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.4",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.4.5"
+  }
+}
