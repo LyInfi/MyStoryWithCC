@@ -6,7 +6,7 @@
     "start": "npx remotion studio",
     "render": "npx remotion render",
     "render:2026-03-12": "npx remotion render Video-2026-03-12 out/video-2026-03-12.mp4 --browser-executable=\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\"",
-    "render:2026-03-13": "npx remotion render Video-2026-03-13 out/video-2026-03-13.mp4 --browser-executable=\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\""
+    "render:2026-03-13": "npx remotion render Video-2026-03-13 out/video-2026-03-13.mp4 --browser-executable=\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --crf=12"
   },
   "dependencies": {
     "remotion": "4.0.435",

@@ -11,7 +11,7 @@ export const RemotionRoot: React.FC = () => {
         id="Video-2026-03-12"
         component={ChatScene}
         durationInFrames={calcDuration(video20260312Config.conversation)}
-        fps={30}
+        fps={60}
         width={1080}
         height={1920}
         defaultProps={video20260312Config}
@@ -20,7 +20,7 @@ export const RemotionRoot: React.FC = () => {
         id="Video-2026-03-13"
         component={ChatScene}
         durationInFrames={calcDuration(video20260313Config.conversation)}
-        fps={30}
+        fps={60}
         width={1080}
         height={1920}
         defaultProps={video20260313Config}

@@ -7,9 +7,9 @@ import { Outro } from "./components/Outro";
 import { Message } from "./data/conversation";
 import { VideoConfig } from "./config/video-2026-03-12";
 
-const CHARS_PER_FRAME = 1.5;
-const GAP_FRAMES = 30;
-const HEADER_DURATION = 40;
+const CHARS_PER_FRAME = 3.0;
+const GAP_FRAMES = 60;
+const HEADER_DURATION = 80;
 
 function buildTimeline(messages: Message[]) {
   const timeline: number[] = [];
@@ -20,8 +20,8 @@ function buildTimeline(messages: Message[]) {
     const typingFrames = Math.ceil(msg.text.length / CHARS_PER_FRAME);
     cursor += typingFrames + GAP_FRAMES;
   }
-  const outroFrame = cursor + 180; // 冻结3秒 + 截图3秒
-  return { timeline, outroFrame, totalFrames: outroFrame + 120 };
+  const outroFrame = cursor + 360; // 冻结3秒 + 截图3秒
+  return { timeline, outroFrame, totalFrames: outroFrame + 240 };
 }
 
 /** 供 Root.tsx 计算 Composition 时长 */

@@ -10,14 +10,14 @@ import {
   useVideoConfig,
 } from "remotion";
 
-export const INTRO_DURATION = 180;
-export const CLICK_FRAME = 58;
+export const INTRO_DURATION = 360;
+export const CLICK_FRAME = 116;
 
 // 时序
 const ICON_IN = 0;        // Claude 图标入场
-const MOUSE_START = 20;   // 鼠标开始移动
-const TERMINAL_IN = 70;   // 终端弹出
-const TITLE_IN = 105;     // 标题打字开始
+const MOUSE_START = 40;   // 鼠标开始移动
+const TERMINAL_IN = 140;  // 终端弹出
+const TITLE_IN = 210;     // 标题打字开始
 
 // Claude 图标（圆形背景 + avatar）
 const ClaudeIcon: React.FC<{ pressing: boolean }> = ({ pressing }) => {
@@ -154,7 +154,7 @@ export const Intro: React.FC<{ title: string }> = ({ title }) => {
   const { fps } = useVideoConfig();
 
   // Claude 图标入场
-  const iconEntrance = spring({ frame: frame - ICON_IN, fps, config: { damping: 12, stiffness: 180 }, durationInFrames: 25 });
+  const iconEntrance = spring({ frame: frame - ICON_IN, fps, config: { damping: 12, stiffness: 180 }, durationInFrames: 50 });
   const iconScale = interpolate(iconEntrance, [0, 1], [0, 1]);
   const iconOpacity = interpolate(iconEntrance, [0, 1], [0, 1]);
 
@@ -174,10 +174,10 @@ export const Intro: React.FC<{ title: string }> = ({ title }) => {
   // 鼠标在终端弹出后淡出
   const mouseFadeOut = interpolate(frame, [TERMINAL_IN, TERMINAL_IN + 15], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
 
-  const isPressing = frame >= CLICK_FRAME && frame < CLICK_FRAME + 14;
+  const isPressing = frame >= CLICK_FRAME && frame < CLICK_FRAME + 28;
 
   // 终端弹出
-  const terminalEntrance = spring({ frame: frame - TERMINAL_IN, fps, config: { damping: 16, stiffness: 200 }, durationInFrames: 35 });
+  const terminalEntrance = spring({ frame: frame - TERMINAL_IN, fps, config: { damping: 16, stiffness: 200 }, durationInFrames: 70 });
   const terminalScale = interpolate(terminalEntrance, [0, 1], [0.4, 1]);
   const terminalOpacity = interpolate(terminalEntrance, [0, 1], [0, 1]);
 
@@ -226,7 +226,7 @@ export const Intro: React.FC<{ title: string }> = ({ title }) => {
         }}
       >
         <Cursor pressing={isPressing} />
-        {frame >= CLICK_FRAME && frame < CLICK_FRAME + 30 && (
+        {frame >= CLICK_FRAME && frame < CLICK_FRAME + 60 && (
           <Ripple localFrame={frame - CLICK_FRAME} />
         )}
       </div>

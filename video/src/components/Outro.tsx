@@ -71,7 +71,7 @@ const SidebarItem: React.FC<{
     frame: frame - delay,
     fps,
     config: { damping: 10, stiffness: 180 },
-    durationInFrames: 35,
+    durationInFrames: 70,
   });
 
   const opacity = interpolate(s, [0, 1], [0, 1]);
@@ -112,7 +112,7 @@ export const Outro: React.FC = () => {
     frame,
     fps,
     config: { damping: 200 },
-    durationInFrames: 40,
+    durationInFrames: 80,
   });
   const titleOpacity = interpolate(titleEntrance, [0, 1], [0, 1]);
   const titleScale = interpolate(titleEntrance, [0, 1], [0.9, 1]);
@@ -163,10 +163,10 @@ export const Outro: React.FC = () => {
       </div>
 
       {/* 关注/点赞出现音效 */}
-      <Sequence from={25} durationInFrames={30}>
+      <Sequence from={50} durationInFrames={60}>
         <Audio src={staticFile("shared/sfx_confirm.mp3")} volume={0.7} />
       </Sequence>
-      <Sequence from={45} durationInFrames={30}>
+      <Sequence from={90} durationInFrames={60}>
         <Audio src={staticFile("shared/sfx_confirm.mp3")} volume={0.7} />
       </Sequence>
 
@@ -182,12 +182,12 @@ export const Outro: React.FC = () => {
         <SidebarItem
           icon={<FollowButton />}
           label="关注"
-          delay={25}
+          delay={50}
         />
         <SidebarItem
           icon={<HeartIcon size={80} />}
           label="点赞"
-          delay={45}
+          delay={90}
         />
       </div>
     </AbsoluteFill>
